@@ -7,11 +7,14 @@
 </template>
 
 <script>
+
+import Store from '../../store'
+
 export default {
   name: "CartSummaryCard",
   computed: {
     cart_total() {
-      return this.$store.getters.cartTotal
+      return Store.getters.cartTotal
     }
   }
 }

@@ -27,20 +27,22 @@
 </template>
 
 <script>
+import Store from '../../store'
+
 export default {
   name: "ProductDescriptionDrawer",
   props: ['product', 'active'],
   methods: {
     addToCart() {
-      this.$store.commit('addToCart', this.product)
+      Store.commit('addToCart', this.product)
     },
     removeFromCart() {
-      this.$store.commit('removeFromCart', this.product)
+      Store.commit('removeFromCart', this.product)
     }
   },
   computed: {
     product_total() {
-      return this.$store.getters.productQuantity(this.product.id)
+      return Store.getters.productQuantity(this.product.id)
     }
   }
 }
