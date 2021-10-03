@@ -1,21 +1,24 @@
 <template>
   <div class="cart-item-card">
     <div class="header">
-      <h3>{{product.name}}</h3>
+
+      <h3>{{product.title}}</h3>
       <h4>In Cart: {{product.quantity}}</h4>
       <h4>Total Cost: {{item_cost.toFixed(2)}}</h4>
     </div>
 
-    <p>{{description}}</p>
+   <p>{{description}}</p>
 
   </div>
 </template>
 
 <script>
+
 export default {
-  props: ['product'],
+  props: ['product','Store'],
   computed: {
     description() {
+      console.log(this.Store)
       return this.product.description.substring(0, 200)
     },
     item_cost() {

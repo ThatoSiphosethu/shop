@@ -34,15 +34,17 @@ export default {
   props: ['product', 'active'],
   methods: {
     addToCart() {
-      Store.commit('addToCart', this.product)
+      console.log(Store.state.cart)
+       Store.commit('addToCart', this.product)
     },
     removeFromCart() {
-      Store.commit('removeFromCart', this.product)
+       Store.commit('removeFromCart', this.product)
     }
   },
   computed: {
     product_total() {
-      return Store.getters.productQuantity(this.product.id)
+      return Store.getters.productQuantity
+
     }
   }
 }
