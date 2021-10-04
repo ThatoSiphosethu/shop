@@ -1,8 +1,22 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/cart">Cart</router-link>
+      <div>
+        <v-toolbar light>
+           <v-app-bar-nav-icon></v-app-bar-nav-icon>
+           <router-link to="/">Home</router-link>
+
+      <v-toolbar-title></v-toolbar-title>
+
+      <v-spacer></v-spacer>
+      <v-btn icon>
+        <v-icon>mdi-export</v-icon>
+        <router-link to="/cart">Cart</router-link>
+      </v-btn>
+       
+      
+        </v-toolbar>
+      </div>
     </div>
     <router-view/>
   </div>
@@ -27,10 +41,12 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  background-color: beige;
 }
 
 #nav {
   padding: 30px;
+  color: black;
 
   a {
     font-weight: bold;

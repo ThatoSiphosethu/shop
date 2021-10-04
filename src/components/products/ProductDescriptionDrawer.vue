@@ -34,7 +34,7 @@ export default {
   props: ['product', 'active'],
   methods: {
     addToCart() {
-      console.log(Store.state.cart)
+      // console.log(Store.state.cart)
        Store.commit('addToCart', this.product)
     },
     removeFromCart() {
@@ -60,7 +60,7 @@ export default {
     background-color: rgba(124, 124, 124, 0.55);
     z-index: 100;
     display: none;
-    transition: display .5s;
+    transition: display ;
 
     &.show {
       display: block;

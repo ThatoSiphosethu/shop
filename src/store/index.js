@@ -24,7 +24,7 @@ export default new Vuex.Store ({
 
         },
         cartItems: state => {
-            console.log(state.cart)
+            // console.log(state.cart)
             return state.cart
         },
         cartTotal: state => {
